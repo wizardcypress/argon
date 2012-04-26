@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS `argo_board_info`;
+CREATE TABLE IF NOT EXISTS `argo_board_info` (
+    `bid` int(11) unsigned NOT NULL auto_increment,
+    `filename` varchar(20) NOT NULL,
+    `title` varchar(40) NOT NULL,
+    `BM` varchar(40),
+    `flag` int(11) unsigned default 0,
+    `level` int(11) unsigned default 0,
+    `parentbid` int(11) unsigned default 0,
+    `total_today` int(11) unsigned default 0,
+    `reserved` varchar(4),
+    PRIMARY KEY (`bid`),
+    KEY (`filename`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+

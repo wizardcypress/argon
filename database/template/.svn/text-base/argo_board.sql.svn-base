@@ -1,0 +1,24 @@
+DROP TABLE IF EXISTS `${boardname}`;
+CREATE TABLE IF NOT EXISTS `${boardname}` (
+    `pid` int(11) unsigned NOT NULL auto_increment,
+    `filename` varchar(16) NOT NULL,
+    `owner` varchar(14),
+    `realowner` varchar(14),
+    `title` varchar(56),
+    `flag` int(11)  unsigned default 0,
+    `size` int(11) unsigned default 0,
+    `id` int(11) unsigned default 0,
+    `filetime` int(11) unsigned default 0,
+    `reserved` varchar(12),
+
+    `content` text,
+    `signature` text,
+    `fromaddr` varchar(64),
+    
+    `agree` int(11) ungsigned NOT NULL default 0,
+    `disagree` int(11) unsigned NOT NULL default 0,
+    PRIMARY KEY (`pid`),
+    KEY (`filename`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 ;
+
+
